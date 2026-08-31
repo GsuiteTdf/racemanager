@@ -30,6 +30,8 @@ Como parte del proyecto se desarrollará también la documentación de la API y 
 
 La gestión de resultados y datos de competencias de simracing suele resolverse hoy mediante herramientas no pensadas para ese fin: planillas de cálculo, mensajes de Discord, archivos sueltos generados por el simulador o servidores de carrera, y registros manuales llevados por los organizadores de las ligas.
 
+En una liga con múltiples carreras y participantes, el organizador debe recopilar manualmente resultados provenientes de diferentes archivos y canales, consolidarlos y redistribuirlos. Esto aumenta el tiempo administrativo posterior a cada carrera y la posibilidad de inconsistencias o pérdida de información. RaceManager busca reducir esa intervención manual centralizando la carga, procesamiento, publicación y consulta histórica de los resultados.
+
 Esto genera diferentes inconvenientes:
 
 - Resultados dispersos entre distintos canales (Discord, planillas, archivos locales).
@@ -461,6 +463,17 @@ La estructura definitiva de entidades y relaciones será definida durante la eta
 - Implementación de autorización.
 - Documentación de endpoints.
 
+Backend — Java + Spring Boot
+
+Se selecciona Java con Spring Boot por tratarse de tecnologías
+maduras para aplicaciones web con lógica de negocio y APIs REST.
+El equipo cuenta con conocimientos previos de Java adquiridos
+durante la carrera, reduciendo el costo de aprendizaje.
+
+Spring Boot facilita la organización del backend por capas y
+se integra con Spring Data JPA y Spring Security, herramientas
+necesarias para persistencia, autenticación y autorización.
+
 ### Etapa 3 — Frontend
 - Configuración de React.
 - Implementación del login.
@@ -518,6 +531,30 @@ Para garantizar la viabilidad del proyecto dentro del período académico, el pr
 - Despliegue online.
 
 El alcance exacto de los datos importados desde Assetto Corsa se ajustará una vez analizados archivos reales de competencias, priorizando inicialmente resultados, vueltas y tiempos por sobre datos más avanzados de telemetría.
+
+Viabilidad técnica
+El equipo dispone de conocimientos en Java, bases de datos y
+desarrollo web. Las tecnologías seleccionadas poseen documentación
+y ecosistemas maduros.
+
+Viabilidad operativa
+La solución no requiere integración directa con servidores de
+Assetto Corsa. El Manager cargará los archivos de resultados
+manualmente, reduciendo dependencias externas.
+
+Viabilidad temporal
+Para asegurar la finalización dentro del período académico,
+se priorizará el flujo principal de carga, procesamiento,
+publicación y consulta. Las funciones analíticas avanzadas
+quedarán fuera del MVP.
+
+Riesgo principal
+Desconocer inicialmente la estructura exacta de los archivos
+generados por Assetto Corsa.
+
+Mitigación
+Obtener archivos reales durante la etapa de análisis y limitar
+el primer importador a vueltas, tiempos y posiciones disponibles.
 
 ## Posibilidades de transferencia
 
