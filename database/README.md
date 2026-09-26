@@ -4,8 +4,9 @@ Esquema MySQL 8 (requiere 8.0.16 o superior por las restricciones `CHECK`).
 
 | Archivo | Descripción |
 |---|---|
-| `schema.sql` | Creación de la base, tablas, claves foráneas y roles iniciales (versión 2). |
+| `schema.sql` | Creación de la base, tablas, claves foráneas y roles iniciales (versión 3). |
 | `migraciones/002_importacion_y_publicacion.sql` | Actualiza una base creada con la versión 1 del esquema. |
+| `migraciones/003_detalle_importacion.sql` | Añade la vista previa JSON normalizada para el importador nativo. |
 | `pruebas/verificar-restricciones.sql` | Prueba automática de las restricciones (duplicados, una confirmada por carrera, publicación auditada). Solo sobre bases de prueba; la ejecuta el CI. |
 | `datos-desarrollo.sql` | Usuarios y ligas de ejemplo **solo para desarrollo** (contraseña documentada en el archivo). |
 
@@ -22,6 +23,7 @@ mysql -u root -p < database/datos-desarrollo.sql   # opcional, solo desarrollo
 
 ```bash
 mysql -u root -p < database/migraciones/002_importacion_y_publicacion.sql
+mysql -u root -p < database/migraciones/003_detalle_importacion.sql
 ```
 
 ## Usuario de aplicación
@@ -34,3 +36,5 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON racemanager.* TO 'racemanager'@'localhos
 ```
 
 La contraseña se pasa a la API mediante la variable de entorno `DB_PASSWORD`.
+
+Si la base ya está en versión 2, aplicar **únicamente** la migración 003 (con respaldo previo).

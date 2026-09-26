@@ -1,0 +1,21 @@
+{
+  "TrackName": "monza",
+  "TrackConfig": "full course",
+  "Type": "RACE",
+  "DurationSecs": 0,
+  "RaceLaps": 10,
+  "Cars": [
+    {"CarId": 9, "Driver": {"Name": "Piloto Prueba A", "Team": "Equipo Azul", "Guid": "ID_SIMULADO_A"}, "Model": "lotus_exos_125", "Skin": "carbon"},
+    {"CarId": 4, "Driver": {"Name": "Piloto Prueba B", "Team": "Equipo Verde", "Guid": "ID_SIMULADO_B"}, "Model": "lotus_exos_125", "Skin": "carbon"}
+  ],
+  "Result": [
+    {"DriverName": "Piloto Prueba A", "DriverGuid": "ID_SIMULADO_A", "CarId": 9, "CarModel": "lotus_exos_125", "BestLap": 98907, "TotalTime": 1003035},
+    {"DriverName": "Piloto Prueba B", "DriverGuid": "ID_SIMULADO_B", "CarId": 4, "CarModel": "lotus_exos_125", "BestLap": 99369, "TotalTime": 1021130}
+  ],
+  "Laps": [
+    {"DriverName": "Piloto Prueba A", "CarId": 9, "LapTime": 104357, "Sectors": [38437, 34564, 31356], "Cuts": 0},
+    {"DriverName": "Piloto Prueba B", "CarId": 4, "LapTime": 120773, "Sectors": [38298, 38079, 44396], "Cuts": 1},
+    {"DriverName": "Piloto Prueba A", "CarId": 9, "LapTime": 98907, "Sectors": [34001, 32906, 32000], "Cuts": 0}
+  ],
+  "Events": [{"Type": "COLLISION_WITH_ENV", "CarId": 4}]
+}

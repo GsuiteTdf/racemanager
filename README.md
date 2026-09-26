@@ -13,7 +13,7 @@ Gestión integral de ligas y competencias de simracing (foco inicial: Assetto Co
 | Restricciones MySQL (duplicados, una importación confirmada, publicación auditada) | ✅ Verificadas en MySQL 8 (base nueva y migrada) |
 | Frontend: login conectado a la API y manejo de sesión | ✅ 7 pruebas Vitest, build y `npm audit` OK |
 | Gestión de ligas, pilotos y carreras | ⬜ Solo consulta de ligas; altas pendientes (iteración 2) |
-| Importación de archivos de Assetto Corsa | ⬜ Pendiente: faltan muestras reales para definir el formato |
+| Importación JSON nativa Assetto Corsa (servidor dedicado) | 🟨 Parser, validación y previsualización persistente implementados; pendientes mapeo de pilotos, confirmación y prueba con liga real |
 | Revisión, publicación y consulta de resultados | ⬜ Pendiente (la base ya impide publicar sin auditoría) |
 
 **El MVP todavía no está terminado:** el circuito carrera → importación → publicación → consulta no está
@@ -113,7 +113,7 @@ Pruebas del frontend: `npm test`.
 | POST | `/api/auth/login` | Público | Devuelve un JWT |
 | GET | `/api/auth/me` | Autenticado | Identidad del token |
 | GET | `/api/ligas` | ADMIN, MANAGER | ADMIN: todas; MANAGER: solo las propias |
-| GET | `/api/ligas/{ligaId}` | ADMIN o Manager de esa liga | Detalle de la liga |
+| GET | `/api/ligas/{ligaId}` | ADMIN o Manager de esa liga | Detalle de la liga |\n| POST | `/api/ligas/{ligaId}/carreras/{carreraId}/importaciones` | ADMIN o Manager de esa liga | Subir JSON nativo AC; genera vista previa PROCESADA |\n| GET | `/api/ligas/{ligaId}/carreras/{carreraId}/importaciones/{importacionId}` | ADMIN o Manager de esa liga | Recuperar vista previa de carga |
 
 Todo lo demás requiere autenticación o está denegado por defecto. Ver [`docs/seguridad/seguridad.md`](docs/seguridad/seguridad.md).
 
@@ -124,7 +124,7 @@ Todo lo demás requiere autenticación o está denegado por defecto. Ver [`docs/
 | 1 | Análisis y diseño | 🟡 En curso: MVP delimitado; faltan relevamiento y muestras reales |
 | 2 | Desarrollo Backend | 🟡 Seguridad y consulta de ligas implementadas |
 | 3 | Desarrollo Frontend | 🟡 Login conectado a la API |
-| 4 | Procesamiento de datos de Assetto Corsa | ⚪ Pendiente (restricciones SQL listas) |
+| 4 | Procesamiento de datos de Assetto Corsa | 🟡 Importador JSON nativo: lectura y staging implementados; faltan confirmación y publicación |
 | 5 | Estadísticas y análisis | ⚪ Fuera del MVP, salvo historial básico |
 | 6 | Pruebas y despliegue | 🟡 CI configurado; despliegue pendiente |
 
@@ -154,7 +154,7 @@ racemanager/
 | Evidencias de pruebas ejecutadas | [`docs/auditoria/evidencias/`](docs/auditoria/evidencias/) |
 | Documentos históricos de la 1ra entrega | [`docs/auditoria/historico/`](docs/auditoria/historico/) |
 | **Guía de integración** (remotos, branches, PR) | [`docs/integracion/guia-integracion.md`](docs/integracion/guia-integracion.md) |
-| Relevamiento de archivos Assetto Corsa | [`docs/importacion/relevamiento-archivos.md`](docs/importacion/relevamiento-archivos.md) |
+| Relevamiento de archivos Assetto Corsa | [`docs/importacion/relevamiento-archivos.md`](docs/importacion/relevamiento-archivos.md) |\n| Importador V1 — API, validaciones y segunda modalidad | [`docs/importacion/importador-ac-servidor.md`](docs/importacion/importador-ac-servidor.md) |
 | Arquitectura y módulos | [`docs/arquitectura/modulos.md`](docs/arquitectura/modulos.md) |
 | Modelo de datos | [`docs/db/modelo-datos.md`](docs/db/modelo-datos.md) |
 | Cómo contribuir | [`CONTRIBUTING.md`](CONTRIBUTING.md) |

@@ -53,11 +53,12 @@ jobs:
           mysql -h 127.0.0.1 -uroot < database/schema.sql
           mysql -h 127.0.0.1 -uroot < database/datos-desarrollo.sql
           mysql -h 127.0.0.1 -uroot < database/pruebas/verificar-restricciones.sql
-      - name: Base existente - migración 002 sobre el esquema v1 y prueba de restricciones
+      - name: Base existente - migraciones 002 y 003 sobre el esquema v1
         run: |
           mysql -h 127.0.0.1 -uroot -e "DROP DATABASE racemanager"
           git show 5792797:database/schema.sql | mysql -h 127.0.0.1 -uroot
           mysql -h 127.0.0.1 -uroot < database/migraciones/002_importacion_y_publicacion.sql
+          mysql -h 127.0.0.1 -uroot < database/migraciones/003_detalle_importacion.sql
           mysql -h 127.0.0.1 -uroot < database/pruebas/verificar-restricciones.sql
 
   frontend:

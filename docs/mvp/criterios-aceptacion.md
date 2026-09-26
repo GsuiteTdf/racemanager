@@ -12,8 +12,8 @@ Alcance y flujo: [`alcance-mvp.md`](alcance-mvp.md).
 | CA-01 | Autenticación y protección de endpoints | `SeguridadIntegracionTest`, `JwtServiceTest`, `EndpointsProtegidosTest` | ✅ Verificado: CI v3 (`36270398824`), 32 pruebas con H2; prueba E2E pendiente |
 | CA-02 | Aislamiento entre ligas | `SeguridadIntegracionTest`, `LigaAccessGuardTest` | ✅ Verificado en CI para endpoints de consulta existentes; extender a cualquier endpoint nuevo |
 | CA-03 | Persistencia de carrera y participantes | Prueba de integración con MySQL | ⬜ Pendiente (iteración 2) |
-| CA-04 | Importación de un archivo real | Prueba con archivo anonimizado | ⬜ Pendiente (bloqueado por muestras) |
-| CA-05 | Rechazo de archivos inválidos, excesivos o repetidos | Pruebas negativas | 🟨 Duplicados y confirmación única **verificados en MySQL**; límite de 2 MB configurado; validación y parser pendientes |
+| CA-04 | Importación de un archivo real | Prueba con archivo anonimizado | 🟨 Parser nativo, API y previsualización implementados con fixture sintética; prueba con archivo reciente y confirmación pendientes |
+| CA-05 | Rechazo de archivos inválidos, excesivos o repetidos | Pruebas negativas | 🟨 Validación JSON, tamaño, integridad y duplicados en backend; restricciones MySQL existentes; pendientes casos reales y confirmación |
 | CA-06 | Revisión y publicación controladas | Pruebas de roles y estados | 🟨 `CHECK` de publicación auditada **verificado en MySQL**; servicios y filtro de consultas pendientes |
 | CA-07 | Resultados publicados fieles al archivo | Comparación contra muestra de referencia | ⬜ Pendiente |
 | CA-08 | Instalación reproducible y API documentada | Instalación desde README en una PC limpia | 🟨 README y CI listos; falta OpenAPI y prueba en PC limpia |

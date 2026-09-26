@@ -262,6 +262,7 @@ CREATE TABLE importacion_carrera (
   estado          ENUM('PENDIENTE', 'PROCESADA', 'CONFIRMADA', 'RECHAZADA', 'ERROR')
                   NOT NULL DEFAULT 'PENDIENTE',
   mensaje_error   TEXT NULL,
+  detalle_json    LONGTEXT NULL, -- datos normalizados en revisión; sin GUID externos
   cargado_en      DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
   procesado_en    DATETIME(3) NULL,
   revisado_por    BIGINT UNSIGNED NULL,

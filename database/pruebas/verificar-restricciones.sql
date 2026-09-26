@@ -32,8 +32,8 @@ BEGIN
   SET v_carrera = LAST_INSERT_ID();
 
   -- 1) El mismo archivo (mismo hash) no puede cargarse dos veces para la misma carrera
-  INSERT INTO importacion_carrera (carrera_id, manager_id, nombre_archivo, hash_sha256, tamano_bytes)
-    VALUES (v_carrera, v_usuario, 'a.json', REPEAT('a', 64), 10);
+  INSERT INTO importacion_carrera (carrera_id, manager_id, nombre_archivo, hash_sha256, tamano_bytes, detalle_json)
+    VALUES (v_carrera, v_usuario, 'a.json', REPEAT('a', 64), 10, '{"fuente":"AC_SERVER_JSON"}');
   SET rechazado = 0;
   INSERT INTO importacion_carrera (carrera_id, manager_id, nombre_archivo, hash_sha256, tamano_bytes)
     VALUES (v_carrera, v_usuario, 'copia.json', REPEAT('a', 64), 10);
