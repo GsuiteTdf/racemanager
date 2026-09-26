@@ -43,7 +43,8 @@ import com.racemanager.api.usuario.UsuarioRepository;
 @ActiveProfiles("test")
 class SeguridadIntegracionTest {
 
-	private static final String PASSWORD = "Clave-Segura-123";
+	/** Contraseña generada al azar para los usuarios ficticios de H2 (no se versiona ninguna). */
+	private static final String PASSWORD = UUID.randomUUID().toString();
 
 	@Autowired
 	private WebApplicationContext contexto;

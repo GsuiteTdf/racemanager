@@ -38,18 +38,19 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: ci-root
+          # Contenedor efímero de CI sin datos reales: no se versiona ninguna contraseña
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         ports: ['3306:3306']
         options: >-
-          --health-cmd="mysqladmin ping -pci-root" --health-interval=5s
+          --health-cmd="mysqladmin ping" --health-interval=5s
           --health-timeout=5s --health-retries=20
     steps:
       - uses: actions/checkout@v4
       - name: Aplicar schema.sql y datos de desarrollo
         run: |
-          mysql -h 127.0.0.1 -uroot -pci-root < database/schema.sql
-          mysql -h 127.0.0.1 -uroot -pci-root < database/datos-desarrollo.sql
-          mysql -h 127.0.0.1 -uroot -pci-root -e "SELECT COUNT(*) AS ligas FROM racemanager.liga"
+          mysql -h 127.0.0.1 -uroot < database/schema.sql
+          mysql -h 127.0.0.1 -uroot < database/datos-desarrollo.sql
+          mysql -h 127.0.0.1 -uroot -e "SELECT COUNT(*) AS ligas FROM racemanager.liga"
 
   frontend:
     name: Frontend (pruebas + build)
