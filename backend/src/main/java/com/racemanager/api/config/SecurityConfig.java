@@ -93,7 +93,7 @@ public class SecurityConfig {
 	CorsConfigurationSource corsConfigurationSource(
 			@Value("${racemanager.cors.origenes-permitidos:}") List<String> origenesPermitidos) {
 		CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(origenesPermitidos.stream().filter(o -> !o.isBlank()).toList());
+		config.setAllowedOrigins(origenesPermitidos.stream().map(String::trim).filter(o -> !o.isEmpty()).toList());
 		config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
 		config.setAllowedHeaders(List.of(HttpHeaders.AUTHORIZATION, HttpHeaders.CONTENT_TYPE));
 		config.setAllowCredentials(false);

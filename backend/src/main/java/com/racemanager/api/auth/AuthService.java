@@ -1,5 +1,6 @@
 package com.racemanager.api.auth;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +23,9 @@ import com.racemanager.api.usuario.UsuarioRepository;
 @Service
 public class AuthService {
 
+	/** BCrypt solo considera los primeros 72 bytes; contraseñas más largas se rechazan. */
+	static final int LONGITUD_MAXIMA_BCRYPT = 72;
+
 	private final UsuarioRepository usuarioRepository;
 	private final PasswordEncoder passwordEncoder;
 	private final JwtService jwtService;
@@ -36,6 +40,10 @@ public class AuthService {
 
 	@Transactional(readOnly = true)
 	public LoginResponse login(LoginRequest solicitud) {
+		if (solicitud.password().getBytes(StandardCharsets.UTF_8).length > LONGITUD_MAXIMA_BCRYPT) {
+			passwordEncoder.matches("comparacion-para-igualar-tiempos", hashFicticio);
+			throw new CredencialesInvalidasException();
+		}
 		Optional<Usuario> encontrado = usuarioRepository.findByEmailIgnoreCase(solicitud.email().trim());
 
 		String hash = encontrado.map(Usuario::getPasswordHash).orElse(hashFicticio);

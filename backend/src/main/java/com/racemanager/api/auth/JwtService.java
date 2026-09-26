@@ -22,12 +22,14 @@ import io.jsonwebtoken.security.Keys;
  * Emite y valida tokens JWT firmados con HMAC-SHA256.
  *
  * <p>Reglas: secreto obligatorio de al menos 32 bytes (se lee de {@code JWT_SECRET}),
- * expiración corta, emisor verificado y rechazo de tokens sin firma o alterados.
+ * expiración corta, emisor y audiencia verificados y rechazo de tokens sin firma o alterados.
  */
 @Service
 public class JwtService {
 
 	static final int LONGITUD_MINIMA_SECRETO = 32;
+	/** Destinatario del token: evita aceptar JWT emitidos para otra aplicación con el mismo secreto. */
+	static final String AUDIENCIA = "racemanager-web";
 	private static final long TOLERANCIA_RELOJ_SEGUNDOS = 30;
 
 	private final SecretKey clave;
@@ -57,6 +59,7 @@ public class JwtService {
 		String token = Jwts.builder()
 			.subject(String.valueOf(usuario.id()))
 			.issuer(emisor)
+			.audience().add(AUDIENCIA).and()
 			.issuedAt(Date.from(ahora))
 			.expiration(Date.from(vence))
 			.claim("email", usuario.email())
@@ -67,7 +70,7 @@ public class JwtService {
 	}
 
 	/**
-	 * Valida firma, expiración y emisor.
+	 * Valida firma, expiración, emisor y audiencia.
 	 *
 	 * @throws JwtException si el token es inválido, está vencido o fue alterado
 	 * @throws IllegalArgumentException si el contenido no tiene el formato esperado
@@ -76,6 +79,7 @@ public class JwtService {
 		Claims claims = Jwts.parser()
 			.verifyWith(clave)
 			.requireIssuer(emisor)
+			.requireAudience(AUDIENCIA)
 			.clockSkewSeconds(TOLERANCIA_RELOJ_SEGUNDOS)
 			.build()
 			.parseSignedClaims(token)

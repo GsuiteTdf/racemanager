@@ -8,6 +8,7 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +18,8 @@ import io.jsonwebtoken.security.Keys;
 
 class JwtServiceTest {
 
-	private static final String SECRETO = "secreto-de-prueba-unitaria-de-32-o-mas-bytes";
+	/** Secretos aleatorios por ejecución: no se versiona ninguna clave de firma. */
+	private static final String SECRETO = secretoAleatorio();
 	private static final String EMISOR = "racemanager-api";
 
 	private final JwtService servicio = new JwtService(SECRETO, 15, EMISOR);
@@ -44,7 +46,7 @@ class JwtServiceTest {
 
 	@Test
 	void rechazaTokenFirmadoConOtroSecreto() {
-		JwtService otro = new JwtService("otro-secreto-diferente-de-32-o-mas-bytes!!", 15, EMISOR);
+		JwtService otro = new JwtService(secretoAleatorio(), 15, EMISOR);
 		String token = otro.generar(manager).token();
 
 		assertThatThrownBy(() -> servicio.validar(token)).isInstanceOf(JwtException.class);
@@ -56,6 +58,7 @@ class JwtServiceTest {
 		String vencido = Jwts.builder()
 			.subject("7")
 			.issuer(EMISOR)
+			.audience().add(JwtService.AUDIENCIA).and()
 			.issuedAt(Date.from(hace2Horas))
 			.expiration(Date.from(hace2Horas.plusSeconds(60)))
 			.claim("roles", List.of("MANAGER"))
@@ -82,8 +85,26 @@ class JwtServiceTest {
 	}
 
 	@Test
+	void rechazaTokenConOtraAudiencia() {
+		String token = Jwts.builder()
+			.subject("7")
+			.issuer(EMISOR)
+			.audience().add("otra-aplicacion").and()
+			.expiration(Date.from(Instant.now().plusSeconds(600)))
+			.claim("roles", List.of("ADMIN"))
+			.signWith(Keys.hmacShaKeyFor(SECRETO.getBytes(StandardCharsets.UTF_8)), Jwts.SIG.HS256)
+			.compact();
+
+		assertThatThrownBy(() -> servicio.validar(token)).isInstanceOf(JwtException.class);
+	}
+
+	@Test
 	void noArrancaSinSecretoOConSecretoCorto() {
 		assertThatThrownBy(() -> new JwtService("", 15, EMISOR)).isInstanceOf(IllegalStateException.class);
 		assertThatThrownBy(() -> new JwtService("corto", 15, EMISOR)).isInstanceOf(IllegalStateException.class);
+	}
+
+	private static String secretoAleatorio() {
+		return UUID.randomUUID() + "-" + UUID.randomUUID();
 	}
 }
