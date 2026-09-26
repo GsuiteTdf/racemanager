@@ -52,7 +52,7 @@ jobs:
           mysql -h 127.0.0.1 -uroot -pci-root -e "SELECT COUNT(*) AS ligas FROM racemanager.liga"
 
   frontend:
-    name: Frontend (build)
+    name: Frontend (pruebas + build)
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -65,4 +65,6 @@ jobs:
           cache: npm
           cache-dependency-path: frontend/package-lock.json
       - run: npm ci
+      - run: npm test
       - run: npm run build
+      - run: npm audit --audit-level=high

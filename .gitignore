@@ -39,3 +39,7 @@ npm-debug.log*
 
 # Generados de TypeScript
 *.tsbuildinfo
+
+# Reportes y respaldos locales
+frontend/coverage/
+*.bundle
