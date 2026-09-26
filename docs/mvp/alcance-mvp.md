@@ -85,9 +85,9 @@ Cada iteración termina con algo demostrable. Duración y responsables: **a defi
 | Iteración | Entregable comprobable | Criterios | Depende de | Estado |
 |---|---|---|---|---|
 | 0 | Muestras reales, entrevista, MVP aprobado | — | Contacto con organizador | Pendiente |
-| 1 | Seguridad: login JWT, roles, aislamiento por liga, pruebas negativas | CA-01, CA-02 | Modelo usuario/rol | **Base implementada** (esta entrega) |
+| 1 | Seguridad: login JWT, roles, aislamiento por liga, pruebas negativas | CA-01, CA-02 | Modelo usuario/rol | **Implementada**; pruebas del backend pendientes de ejecución |
 | 2 | Alta de liga, pilotos y carrera con persistencia | CA-03 | Iteración 1 | Pendiente |
-| 3 | Importador validado, transaccional, con revisión | CA-04, CA-05 | Iteraciones 0 y 2 | Pendiente (esquema listo) |
+| 3 | Importador validado, transaccional, con revisión | CA-04, CA-05 | Iteraciones 0 y 2 | Pendiente (restricciones SQL verificadas) |
 | 4 | Publicación y consulta; frontend integrado | CA-06, CA-07 | Iteración 3 | Pendiente |
 | 5 | Pruebas integrales, documentación de API y demo desplegada | CA-08 | Iteración 4 | Pendiente |
 

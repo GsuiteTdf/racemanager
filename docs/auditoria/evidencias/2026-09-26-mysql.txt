@@ -1,0 +1,16 @@
+# Evidencia MySQL — 2026-09-26T18:18:15Z
+mysql  Ver 8.0.46-0ubuntu0.24.04.4 for Linux on x86_64 ((Ubuntu))
+## 1. Base nueva con schema.sql + datos-desarrollo.sql + prueba de restricciones
+resultado
+OK: restricciones verificadas
+exit=0
+importaciones_residuales
+0
+## 2. Migración 002 sobre esquema v1 y comparación estructural
+resultado
+OK: restricciones verificadas
+exit=0
+Estructura migrada == estructura nueva: IDÉNTICAS
+## 3. Control negativo: esquema v1 (sin restricciones) debe FALLAR la prueba
+ERROR 1054 (42S22) at line 87: Unknown column 'hash_sha256' in 'field list'
+exit=1 (se espera distinto de 0)

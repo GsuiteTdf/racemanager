@@ -9,14 +9,17 @@ Alcance y flujo: [`alcance-mvp.md`](alcance-mvp.md).
 
 | ID | Criterio | Evidencia | Estado |
 |---|---|---|---|
-| CA-01 | Autenticación y protección de endpoints | Pruebas de integración de seguridad | **Implementado** — pendiente de ejecutar en CI/MySQL |
-| CA-02 | Aislamiento entre ligas | Pruebas con dos Managers | **Implementado para ligas** — extender a cada endpoint nuevo |
-| CA-03 | Persistencia de carrera y participantes | Prueba de integración con MySQL | Pendiente |
-| CA-04 | Importación de un archivo real | Prueba con archivo anonimizado | Pendiente (bloqueado por muestras) |
-| CA-05 | Rechazo de archivos inválidos, excesivos o repetidos | Pruebas negativas | Esquema listo; lógica pendiente |
-| CA-06 | Revisión y publicación controladas | Pruebas de roles y estados | Esquema listo; lógica pendiente |
-| CA-07 | Resultados publicados fieles al archivo | Comparación contra muestra de referencia | Pendiente |
-| CA-08 | Instalación reproducible y API documentada | Instalación desde README en una PC limpia | Parcial |
+| CA-01 | Autenticación y protección de endpoints | `SeguridadIntegracionTest`, `JwtServiceTest`, `EndpointsProtegidosTest` | 🟦 Implementado; pruebas escritas, **pendientes de ejecución** (CI) |
+| CA-02 | Aislamiento entre ligas | `SeguridadIntegracionTest`, `LigaAccessGuardTest` | 🟦 Implementado para consulta de ligas; pruebas pendientes de ejecución; extender a cada endpoint nuevo |
+| CA-03 | Persistencia de carrera y participantes | Prueba de integración con MySQL | ⬜ Pendiente (iteración 2) |
+| CA-04 | Importación de un archivo real | Prueba con archivo anonimizado | ⬜ Pendiente (bloqueado por muestras) |
+| CA-05 | Rechazo de archivos inválidos, excesivos o repetidos | Pruebas negativas | 🟨 Duplicados y confirmación única **verificados en MySQL**; límite de 2 MB configurado; validación y parser pendientes |
+| CA-06 | Revisión y publicación controladas | Pruebas de roles y estados | 🟨 `CHECK` de publicación auditada **verificado en MySQL**; servicios y filtro de consultas pendientes |
+| CA-07 | Resultados publicados fieles al archivo | Comparación contra muestra de referencia | ⬜ Pendiente |
+| CA-08 | Instalación reproducible y API documentada | Instalación desde README en una PC limpia | 🟨 README y CI listos; falta OpenAPI y prueba en PC limpia |
+
+Estados: ✅ corregido y verificado · 🟦 implementado, pendiente de pruebas · 🟨 parcial · ⬜ pendiente.
+Evidencia de ejecución: [`../auditoria/evidencias/`](../auditoria/evidencias/).
 
 ## Detalle
 
@@ -31,7 +34,7 @@ Alcance y flujo: [`alcance-mvp.md`](alcance-mvp.md).
 - **Dado** que falta `JWT_SECRET` o tiene menos de 32 caracteres, **cuando** se inicia la API,
   **entonces** no arranca y explica el motivo.
 
-*Evidencia:* `SeguridadIntegracionTest`, `JwtServiceTest`.
+*Evidencia:* `SeguridadIntegracionTest`, `JwtServiceTest` (incluye token de otra audiencia y contraseña > 72 bytes).
 
 ### CA-02 — Aislamiento entre ligas
 
@@ -40,6 +43,7 @@ Alcance y flujo: [`alcance-mvp.md`](alcance-mvp.md).
 - **Dado** un id de liga inexistente, **entonces** la respuesta es la misma que para una liga ajena (`403`).
 - **Dado** un usuario PILOTO o EQUIPO, **cuando** usa un endpoint de gestión, **entonces** recibe `403`.
 - **Dado** un ADMIN, **entonces** puede consultar cualquier liga.
+- **Dado** un endpoint nuevo sin `@PreAuthorize`, **entonces** `EndpointsProtegidosTest` falla.
 
 *Evidencia:* `SeguridadIntegracionTest`, `LigaAccessGuardTest`.
 *Regla para el equipo:* **cada endpoint nuevo** que reciba un id de liga o de un recurso de una liga
@@ -65,7 +69,7 @@ debe usar `@ligaAccess` y sumar una prueba "Manager A contra recurso de B".
 - Archivo mayor a 2 MB → rechazado antes de procesarse.
 - Formato o contenido inválido → importación en `ERROR` con mensaje entendible; **no** se guardan resultados parciales.
 - Mismo archivo (mismo SHA-256) para la misma carrera → rechazado (`409`).
-- Segunda importación confirmada para una carrera → imposible (restricción en la base).
+- Segunda importación confirmada para una carrera → imposible (restricción en la base, verificada por `database/pruebas/verificar-restricciones.sql`).
 
 ### CA-06 — Revisión y publicación controladas
 

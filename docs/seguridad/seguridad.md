@@ -1,5 +1,7 @@
 # RaceManager — Seguridad
 
+> Estado y trazabilidad de cada hallazgo: [`../auditoria/diagnostico-y-trazabilidad-2026-09-26.md`](../auditoria/diagnostico-y-trazabilidad-2026-09-26.md).
+
 Estado de la configuración de seguridad y reglas para los próximos módulos.
 
 ## 1. Qué cambió en esta entrega
@@ -8,12 +10,14 @@ Estado de la configuración de seguridad y reglas para los próximos módulos.
 |---|---|
 | `anyRequest().permitAll()`: todos los endpoints abiertos | Públicos solo `GET /api/health` y `POST /api/auth/login`; el resto de `/api/**` exige JWT; cualquier otra ruta se deniega |
 | `httpBasic` activo sin usuarios reales | Desactivado (también formLogin y logout de sesión) |
-| Sin autenticación | Login con BCrypt y JWT HS256 con expiración y emisor verificados |
+| Sin autenticación | Login con BCrypt y JWT HS256 con expiración, emisor y audiencia verificados; contraseñas de más de 72 bytes rechazadas |
 | Sin control por liga | `@ligaAccess`: un Manager solo accede a sus propias ligas |
 | Usuario `root` sin clave en `application.properties` | `DB_URL`, `DB_USER`, `DB_PASSWORD` por variables de entorno |
 | — | `JWT_SECRET` obligatorio (≥ 32 caracteres); la API no arranca sin él |
 | Errores con detalle interno | Respuestas `401`/`403`/`400` en JSON, sin mensajes ni trazas internas |
-| Java 24 (sin soporte) | Java 21 LTS |
+| Java 24 (sin soporte) | Java 21 LTS (Gradle obtiene el JDK si falta) |
+| Nada impedía olvidar `@PreAuthorize` | `EndpointsProtegidosTest` falla si un endpoint nuevo no declara la regla |
+| Claves fijas en pruebas y CI | Valores aleatorios por ejecución; escaneo de secretos sin hallazgos |
 
 ## 2. Cómo funciona
 
@@ -54,6 +58,7 @@ Cliente ── GET /api/ligas  Authorization: Bearer <token> ──► JwtAuthen
 - Calcular SHA-256 del contenido y rechazar repetidos (`UNIQUE (carrera_id, hash_sha256)`).
 - Procesar en una transacción: si algo falla, no queda ningún resultado parcial.
 - No guardar el archivo con el nombre enviado por el usuario (evita *path traversal*); usar un nombre generado.
+- Si los archivos se conservan en el servidor, analizarlos con antivirus antes de procesarlos (aporte de la 1ra entrega).
 - Publicar solo después de la confirmación explícita del Manager; la base impide publicar sin auditoría.
 
 ## 5. Configuración local
@@ -73,7 +78,7 @@ Generar un secreto: `openssl rand -base64 48` (o cualquier generador de 48+ cara
 
 | Pendiente | Prioridad | Nota |
 |---|---|---|
-| Ejecutar las pruebas en CI y contra MySQL | Alta | El CI queda configurado en este PR |
+| Ejecutar las pruebas del backend (32 pruebas escritas) | **Alta** | No pudieron ejecutarse por falta de acceso a Maven; corren en el CI del PR |
 | Limitar intentos de login (fuerza bruta) | Media | Antes del despliegue público |
 | Alta de usuarios y cambio de contraseña | Media | Definir quién crea Managers (decisión abierta 3) |
 | Revocación de tokens / usuarios desactivados | Media | Hoy un token sigue válido hasta vencer (60 min por defecto) |

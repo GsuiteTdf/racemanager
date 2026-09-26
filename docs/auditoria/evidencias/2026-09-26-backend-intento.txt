@@ -1,0 +1,27 @@
+# Intento de compilación y pruebas del backend — 2026-09-26T18:19:21Z
+JDK disponible:
+openjdk version "21.0.10" 2026-01-20
+OpenJDK Runtime Environment (build 21.0.10+7-Ubuntu-124.04)
+OpenJDK 64-Bit Server VM (build 21.0.10+7-Ubuntu-124.04, mixed mode, sharing)
+
+$ ./gradlew test --no-daemon
+Fetching distribution.
+Downloading https://services.gradle.org/distributions/gradle-9.7.1-bin.zip
+
+Attempt 1/1 failed. Reason: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 403 Forbidden"
+Exception in thread "main" java.io.IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 403 Forbidden"
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.doTunneling0(HttpURLConnection.java:2301)
+exit=1
+
+$ gradle test --no-daemon   (Gradle 8.14.3 instalado localmente, sin wrapper)
+* What went wrong:
+Plugin [id: 'org.gradle.toolchains.foojay-resolver-convention', version: '1.0.0'] was not found in any of the following sources:
+- Plugin Repositories (could not resolve plugin artifact 'org.gradle.toolchains.foojay-resolver-convention:org.gradle.toolchains.foojay-resolver-convention.gradle.plugin:1.0.0')
+  Searched in the following repositories:
+BUILD FAILED in 10s
+
+$ curl -sS https://repo.maven.apache.org/maven2/
+curl: (56) CONNECT tunnel failed, response 403
+
+Conclusión: sin acceso a services.gradle.org, plugins.gradle.org ni repo.maven.apache.org (proxy 403).
+Las pruebas del backend NO se ejecutaron. No deben considerarse superadas.
