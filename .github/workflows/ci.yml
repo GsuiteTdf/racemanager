@@ -46,11 +46,19 @@ jobs:
           --health-timeout=5s --health-retries=20
     steps:
       - uses: actions/checkout@v4
-      - name: Aplicar schema.sql y datos de desarrollo
+        with:
+          fetch-depth: 0   # necesario para leer el esquema v1 desde el historial
+      - name: Base nueva - schema.sql, datos de desarrollo y prueba de restricciones
         run: |
           mysql -h 127.0.0.1 -uroot < database/schema.sql
           mysql -h 127.0.0.1 -uroot < database/datos-desarrollo.sql
-          mysql -h 127.0.0.1 -uroot -e "SELECT COUNT(*) AS ligas FROM racemanager.liga"
+          mysql -h 127.0.0.1 -uroot < database/pruebas/verificar-restricciones.sql
+      - name: Base existente - migración 002 sobre el esquema v1 y prueba de restricciones
+        run: |
+          mysql -h 127.0.0.1 -uroot -e "DROP DATABASE racemanager"
+          git show 5792797:database/schema.sql | mysql -h 127.0.0.1 -uroot
+          mysql -h 127.0.0.1 -uroot < database/migraciones/002_importacion_y_publicacion.sql
+          mysql -h 127.0.0.1 -uroot < database/pruebas/verificar-restricciones.sql
 
   frontend:
     name: Frontend (pruebas + build)
