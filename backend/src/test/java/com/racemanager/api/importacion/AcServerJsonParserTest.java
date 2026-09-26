@@ -80,4 +80,18 @@ class AcServerJsonParserTest {
         assertThatThrownBy(() -> parser.parsear(json.getBytes(StandardCharsets.UTF_8)))
             .isInstanceOf(ArchivoImportacionInvalidoException.class);
     }
+
+    @Test
+    void procesaMuestraHistoricaDeMonzaConIdentidadesFicticias() throws IOException {
+        byte[] muestra = new ClassPathResource(
+            "ejemplos/ac-servidor-monza-historico-anonimizado.json").getContentAsByteArray();
+        ResultadoParseado resultado = parser.parsear(muestra);
+        assertThat(resultado.circuito()).isEqualTo("monza");
+        assertThat(resultado.participantes()).hasSize(17);
+        assertThat(resultado.vueltasRegistradas()).isEqualTo(82);
+        assertThat(resultado.eventosRegistrados()).isEqualTo(129);
+        assertThat(resultado.participantes().get(0).nombre()).startsWith("Piloto de prueba");
+        assertThat(JsonMapper.builder().build().writeValueAsString(resultado))
+            .doesNotContain("IDENTIFICADOR_NO_REAL");
+    }
 }

@@ -14,7 +14,7 @@ Competizione. Se estudiaron las muestras históricas utilizadas en Simresults:
 - [Clasificación: 2015_10_17_9_30_QUALIFY.json](https://github.com/mauserrifle/simresults/blob/develop/tests/logs/assettocorsa-server-json/2015_10_17_9_30_QUALIFY.json)
 - [Caso especial: Events = null](https://github.com/mauserrifle/simresults/blob/develop/tests/logs/assettocorsa-server-json/race.changed.with.null.events.json)
 
-El archivo sintético **`backend/src/test/resources/ejemplos/ac-servidor-carrera.json`** respeta los
+El repositorio incorpora además `ac-servidor-monza-historico-anonimizado.json`: versión\nreducida y anonimizada del archivo público de Monza 2015, con los 17 coches, 82 vueltas y\n129 tipos de evento, pero sin nombres ni identificadores reales. Se conserva la licencia ISC\ndel proyecto de origen en `backend/src/test/resources/ejemplos/LICENCIA_SIMRESULTS.txt`.\n\nEl archivo sintético **`backend/src/test/resources/ejemplos/ac-servidor-carrera.json`** respeta los
 campos observados, pero contiene nombres e identificadores ficticios. No se incorporaron al
 repositorio datos personales ni Steam IDs de los archivos públicos.
 

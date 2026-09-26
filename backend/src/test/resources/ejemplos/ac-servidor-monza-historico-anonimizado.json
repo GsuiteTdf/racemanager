@@ -1,0 +1,1644 @@
+{
+  "TrackName": "monza",
+  "TrackConfig": "full course",
+  "Type": "RACE",
+  "DurationSecs": 0,
+  "RaceLaps": 10,
+  "Cars": [
+    {
+      "CarId": 0,
+      "Driver": {
+        "Name": "Piloto de prueba 0",
+        "Team": "Equipo ficticio 0",
+        "Guid": "IDENTIFICADOR_NO_REAL_0"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "carbon",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 1,
+      "Driver": {
+        "Name": "Piloto de prueba 1",
+        "Team": "Equipo ficticio 1",
+        "Guid": "IDENTIFICADOR_NO_REAL_1"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "0_Lotus",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 2,
+      "Driver": {
+        "Name": "Piloto de prueba 2",
+        "Team": "Equipo ficticio 2",
+        "Guid": "IDENTIFICADOR_NO_REAL_2"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Lotus_Legends",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 3,
+      "Driver": {
+        "Name": "Piloto de prueba 3",
+        "Team": "Equipo ficticio 3",
+        "Guid": "IDENTIFICADOR_NO_REAL_3"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Premiere",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 4,
+      "Driver": {
+        "Name": "Piloto de prueba 4",
+        "Team": "Equipo ficticio 4",
+        "Guid": "IDENTIFICADOR_NO_REAL_4"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "carbon",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 5,
+      "Driver": {
+        "Name": "Piloto de prueba 5",
+        "Team": "Equipo ficticio 5",
+        "Guid": "IDENTIFICADOR_NO_REAL_5"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "0_Lotus",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 6,
+      "Driver": {
+        "Name": "Piloto de prueba 6",
+        "Team": "Equipo ficticio 6",
+        "Guid": "IDENTIFICADOR_NO_REAL_6"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Lotus_Legends",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 7,
+      "Driver": {
+        "Name": "Piloto de prueba 7",
+        "Team": "Equipo ficticio 7",
+        "Guid": "IDENTIFICADOR_NO_REAL_7"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Premiere",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 8,
+      "Driver": {
+        "Name": "Piloto de prueba 8",
+        "Team": "Equipo ficticio 8",
+        "Guid": "IDENTIFICADOR_NO_REAL_8"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "carbon",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 9,
+      "Driver": {
+        "Name": "Piloto de prueba 9",
+        "Team": "Equipo ficticio 9",
+        "Guid": "IDENTIFICADOR_NO_REAL_9"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "0_Lotus",
+      "BallastKG": 20
+    },
+    {
+      "CarId": 10,
+      "Driver": {
+        "Name": "Piloto de prueba 10",
+        "Team": "Equipo ficticio 10",
+        "Guid": "IDENTIFICADOR_NO_REAL_10"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Lotus_Legends",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 11,
+      "Driver": {
+        "Name": "Piloto de prueba 11",
+        "Team": "Equipo ficticio 11",
+        "Guid": "IDENTIFICADOR_NO_REAL_11"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Premiere",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 12,
+      "Driver": {
+        "Name": "Piloto de prueba 12",
+        "Team": "Equipo ficticio 12",
+        "Guid": "IDENTIFICADOR_NO_REAL_12"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "carbon",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 13,
+      "Driver": {
+        "Name": "Piloto de prueba 13",
+        "Team": "Equipo ficticio 13",
+        "Guid": "IDENTIFICADOR_NO_REAL_13"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "0_Lotus",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 14,
+      "Driver": {
+        "Name": "Piloto de prueba 14",
+        "Team": "Equipo ficticio 14",
+        "Guid": "IDENTIFICADOR_NO_REAL_14"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Lotus_Legends",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 15,
+      "Driver": {
+        "Name": "Piloto de prueba 15",
+        "Team": "Equipo ficticio 15",
+        "Guid": "IDENTIFICADOR_NO_REAL_15"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Lotus_Legends",
+      "BallastKG": 0
+    },
+    {
+      "CarId": 16,
+      "Driver": {
+        "Name": "Piloto de prueba 16",
+        "Team": "Equipo ficticio 16",
+        "Guid": "IDENTIFICADOR_NO_REAL_16"
+      },
+      "Model": "lotus_exos_125",
+      "Skin": "Premiere",
+      "BallastKG": 0
+    }
+  ],
+  "Result": [
+    {
+      "DriverName": "Piloto de prueba 9",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_9",
+      "CarId": 9,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 98907,
+      "TotalTime": 1003035,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_7",
+      "CarId": 7,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 100687,
+      "TotalTime": 972763,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_4",
+      "CarId": 4,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 99369,
+      "TotalTime": 823824,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_2",
+      "CarId": 2,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 100594,
+      "TotalTime": 965975,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_0",
+      "CarId": 0,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 100607,
+      "TotalTime": 1002096,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 3",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_3",
+      "CarId": 3,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 105360,
+      "TotalTime": 1017644,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 5",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_5",
+      "CarId": 5,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 101385,
+      "TotalTime": 1030512,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 15",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_15",
+      "CarId": 15,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 133463,
+      "TotalTime": 1023011,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 16",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_16",
+      "CarId": 16,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 257378,
+      "TotalTime": 629283,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_12",
+      "CarId": 12,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 138768,
+      "TotalTime": 1046174,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 13",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_13",
+      "CarId": 13,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 999999999,
+      "TotalTime": 0,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 11",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_11",
+      "CarId": 11,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 999999999,
+      "TotalTime": 0,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_8",
+      "CarId": 8,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 999999999,
+      "TotalTime": 0,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 10",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_10",
+      "CarId": 10,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 999999999,
+      "TotalTime": 0,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 6",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_6",
+      "CarId": 6,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 999999999,
+      "TotalTime": 0,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 1",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_1",
+      "CarId": 1,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 999999999,
+      "TotalTime": 0,
+      "BallastKG": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 14",
+      "DriverGuid": "IDENTIFICADOR_NO_REAL_14",
+      "CarId": 14,
+      "CarModel": "lotus_exos_125",
+      "BestLap": 999999999,
+      "TotalTime": 0,
+      "BallastKG": 0
+    }
+  ],
+  "Laps": [
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 104357,
+      "Sectors": [
+        38437,
+        34564,
+        31356
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 10",
+      "CarId": 10,
+      "LapTime": 105967,
+      "Sectors": [
+        39520,
+        32999,
+        33448
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "CarId": 12,
+      "LapTime": 108041,
+      "Sectors": [
+        40649,
+        34484,
+        32908
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 120773,
+      "Sectors": [
+        38298,
+        38079,
+        44396
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 123012,
+      "Sectors": [
+        39870,
+        49252,
+        33890
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "CarId": 8,
+      "LapTime": 140507,
+      "Sectors": [
+        76018,
+        32625,
+        31864
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 161793,
+      "Sectors": [
+        93244,
+        35622,
+        32927
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 3",
+      "CarId": 3,
+      "LapTime": 188254,
+      "Sectors": [
+        105913,
+        34110,
+        48231
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 100735,
+      "Sectors": [
+        35876,
+        33165,
+        31694
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "CarId": 12,
+      "LapTime": 101374,
+      "Sectors": [
+        36619,
+        33197,
+        31558
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 10",
+      "CarId": 10,
+      "LapTime": 105027,
+      "Sectors": [
+        40802,
+        32284,
+        31941
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 100416,
+      "Sectors": [
+        35886,
+        32602,
+        31928
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 15",
+      "CarId": 15,
+      "LapTime": 238706,
+      "Sectors": [
+        160137,
+        45859,
+        32710
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "CarId": 8,
+      "LapTime": 99695,
+      "Sectors": [
+        35647,
+        32508,
+        31540
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 102001,
+      "Sectors": [
+        37277,
+        33004,
+        31720
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 134492,
+      "Sectors": [
+        61723,
+        35275,
+        37494
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 5",
+      "CarId": 5,
+      "LapTime": 132710,
+      "Sectors": [
+        67924,
+        32927,
+        31859
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 99501,
+      "Sectors": [
+        35794,
+        32485,
+        31222
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 183910,
+      "Sectors": [
+        119834,
+        32693,
+        31383
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 10",
+      "CarId": 10,
+      "LapTime": 100935,
+      "Sectors": [
+        37151,
+        32302,
+        31482
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "CarId": 12,
+      "LapTime": 104428,
+      "Sectors": [
+        36636,
+        35694,
+        32098
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 99999,
+      "Sectors": [
+        35855,
+        33071,
+        31073
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "CarId": 8,
+      "LapTime": 104340,
+      "Sectors": [
+        35890,
+        36464,
+        31986
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 14",
+      "CarId": 14,
+      "LapTime": 355060,
+      "Sectors": [
+        290899,
+        32594,
+        31567
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 101683,
+      "Sectors": [
+        37500,
+        32561,
+        31622
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 16",
+      "CarId": 16,
+      "LapTime": 371884,
+      "Sectors": [
+        276623,
+        42228,
+        53033
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 15",
+      "CarId": 15,
+      "LapTime": 133463,
+      "Sectors": [
+        37546,
+        42201,
+        53716
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 104389,
+      "Sectors": [
+        37289,
+        35263,
+        31837
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 100511,
+      "Sectors": [
+        36305,
+        32594,
+        31612
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 100594,
+      "Sectors": [
+        36366,
+        32543,
+        31685
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "CarId": 12,
+      "LapTime": 102484,
+      "Sectors": [
+        37198,
+        33304,
+        31982
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 10",
+      "CarId": 10,
+      "LapTime": 106708,
+      "Sectors": [
+        43415,
+        32257,
+        31036
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 101263,
+      "Sectors": [
+        36085,
+        32522,
+        32656
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "CarId": 8,
+      "LapTime": 100521,
+      "Sectors": [
+        35649,
+        33043,
+        31829
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 3",
+      "CarId": 3,
+      "LapTime": 132692,
+      "Sectors": [
+        65615,
+        35118,
+        31959
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 14",
+      "CarId": 14,
+      "LapTime": 107371,
+      "Sectors": [
+        36609,
+        32706,
+        38056
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 101552,
+      "Sectors": [
+        36910,
+        33048,
+        31594
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 101620,
+      "Sectors": [
+        37216,
+        33080,
+        31324
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 99506,
+      "Sectors": [
+        35597,
+        32698,
+        31211
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 103951,
+      "Sectors": [
+        36483,
+        36292,
+        31176
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "CarId": 12,
+      "LapTime": 102097,
+      "Sectors": [
+        36995,
+        33139,
+        31963
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 10",
+      "CarId": 10,
+      "LapTime": 100189,
+      "Sectors": [
+        36374,
+        32778,
+        31037
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 100261,
+      "Sectors": [
+        35898,
+        32561,
+        31802
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 3",
+      "CarId": 3,
+      "LapTime": 107917,
+      "Sectors": [
+        36210,
+        39302,
+        32405
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 101315,
+      "Sectors": [
+        37182,
+        32436,
+        31697
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 104266,
+      "Sectors": [
+        36815,
+        33472,
+        33979
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "CarId": 8,
+      "LapTime": 152990,
+      "Sectors": [
+        88762,
+        32234,
+        31994
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 100488,
+      "Sectors": [
+        36295,
+        31986,
+        32207
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 101539,
+      "Sectors": [
+        36455,
+        32446,
+        32638
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 5",
+      "CarId": 5,
+      "LapTime": 167869,
+      "Sectors": [
+        102381,
+        32854,
+        32634
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 10",
+      "CarId": 10,
+      "LapTime": 102326,
+      "Sectors": [
+        37770,
+        32755,
+        31801
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "CarId": 12,
+      "LapTime": 102781,
+      "Sectors": [
+        37139,
+        33098,
+        32544
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 99869,
+      "Sectors": [
+        36051,
+        32130,
+        31688
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 16",
+      "CarId": 16,
+      "LapTime": 257378,
+      "Sectors": [
+        195243,
+        31491,
+        30644
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 101838,
+      "Sectors": [
+        36749,
+        32270,
+        32819
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 3",
+      "CarId": 3,
+      "LapTime": 112105,
+      "Sectors": [
+        41513,
+        34525,
+        36067
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 101530,
+      "Sectors": [
+        37140,
+        33277,
+        31113
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "CarId": 8,
+      "LapTime": 101266,
+      "Sectors": [
+        36093,
+        33542,
+        31631
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 99409,
+      "Sectors": [
+        35986,
+        32360,
+        31063
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 102169,
+      "Sectors": [
+        36869,
+        32999,
+        32301
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 5",
+      "CarId": 5,
+      "LapTime": 101931,
+      "Sectors": [
+        36573,
+        33646,
+        31712
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 101856,
+      "Sectors": [
+        37087,
+        33332,
+        31437
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 101088,
+      "Sectors": [
+        36715,
+        32656,
+        31717
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 100607,
+      "Sectors": [
+        36316,
+        32701,
+        31590
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 8",
+      "CarId": 8,
+      "LapTime": 99924,
+      "Sectors": [
+        35335,
+        33183,
+        31406
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 98907,
+      "Sectors": [
+        35506,
+        32324,
+        31077
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 4",
+      "CarId": 4,
+      "LapTime": 99369,
+      "Sectors": [
+        35640,
+        32661,
+        31068
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 5",
+      "CarId": 5,
+      "LapTime": 105048,
+      "Sectors": [
+        37318,
+        35789,
+        31941
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 135564,
+      "Sectors": [
+        69720,
+        34033,
+        31811
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 100746,
+      "Sectors": [
+        36701,
+        32536,
+        31509
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 102431,
+      "Sectors": [
+        37582,
+        33799,
+        31050
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 99940,
+      "Sectors": [
+        35860,
+        31986,
+        32094
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 3",
+      "CarId": 3,
+      "LapTime": 233371,
+      "Sectors": [
+        165484,
+        34816,
+        33071
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 5",
+      "CarId": 5,
+      "LapTime": 101385,
+      "Sectors": [
+        36800,
+        32679,
+        31906
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 2",
+      "CarId": 2,
+      "LapTime": 115163,
+      "Sectors": [
+        36846,
+        46120,
+        32197
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 7",
+      "CarId": 7,
+      "LapTime": 100687,
+      "Sectors": [
+        37359,
+        32332,
+        30996
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 0",
+      "CarId": 0,
+      "LapTime": 101360,
+      "Sectors": [
+        37271,
+        32000,
+        32089
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 9",
+      "CarId": 9,
+      "LapTime": 99618,
+      "Sectors": [
+        36397,
+        32188,
+        31033
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 3",
+      "CarId": 3,
+      "LapTime": 105360,
+      "Sectors": [
+        36766,
+        34897,
+        33697
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 15",
+      "CarId": 15,
+      "LapTime": 377051,
+      "Sectors": [
+        303782,
+        35515,
+        37754
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 5",
+      "CarId": 5,
+      "LapTime": 102694,
+      "Sectors": [
+        38393,
+        32527,
+        31774
+      ],
+      "Cuts": 0
+    },
+    {
+      "DriverName": "Piloto de prueba 12",
+      "CarId": 12,
+      "LapTime": 138768,
+      "Sectors": [
+        60522,
+        32850,
+        45396
+      ],
+      "Cuts": 0
+    }
+  ],
+  "Events": [
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_CAR"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    },
+    {
+      "Type": "COLLISION_WITH_ENV"
+    }
+  ]
+}
