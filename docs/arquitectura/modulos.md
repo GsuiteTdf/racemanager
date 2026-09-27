@@ -1,7 +1,7 @@
 # RaceManager — Arquitectura y Módulos
 
-**Actualizado:** 2da entrega — se agrega el estado de cada módulo.
-Leyenda: ✅ implementado · 🟡 parcial · ⚪ pendiente · ➖ fuera del MVP
+**Actualizado:** 27/09/2026 — alcance de la segunda entrega y prioridades del MVP; refleja el importador integrado en `main`.
+**Estados:** ✅ implementado · 🟡 parcial · ⚪ pendiente · ➖ fuera del MVP. **Prioridades:** P0 = indispensable para demostrar el flujo MVP; P1 = complementario en versión mínima (por ejemplo, precarga de equipos/circuitos e historial); P2 = ampliación posterior al MVP. Las prioridades son propuestas de planificación y deben validarse con el equipo y el tutor.
 
 ## Arquitectura general
 
@@ -56,35 +56,42 @@ racemanager/
 
 ## Módulos Backend (`backend/`)
 
-Paquete base: `com.racemanager.api`
+Paquete base: `com.racemanager.api`. **P0** significa obligatorio para el flujo demostrable; no implica implementar todas las funciones posibles del módulo.
 
-| Módulo | Paquete | Responsabilidad | Estado |
-|---|---|---|---|
-| Auth | `auth` | Login, emisión y validación de JWT | ✅ login y `/me` · ⚪ alta de usuarios |
-| Usuario | `usuario` | Usuarios y roles | 🟡 entidades y repositorios |
-| Liga | `liga` | Ligas, categorías, **aislamiento por liga** (`@ligaAccess`) | 🟡 consulta y control de pertenencia |
-| Equipo | `equipo` | Equipos por liga | ⚪ (precarga mínima en MVP) |
-| Piloto | `piloto` | Pilotos e historial deportivo | ⚪ |
-| Vehículo | `vehiculo` | Autos del simulador | ➖ |
-| Circuito | `circuito` | Circuitos | ⚪ (catálogo precargado) |
-| Carrera | `carrera` | Calendario y flujo de publicación | ⚪ (esquema listo) |
-| Sesión | `sesion` | Sesiones, resultados y vueltas | ⚪ (a definir con archivos reales) |
-| Importación | `importacion` | Parseo de archivos Assetto Corsa | ⚪ (esquema listo, bloqueado por muestras) |
-| Estadística | `estadistica` | Rendimiento y comparaciones | ➖ salvo historial básico |
-| Common / Config | `common`, `config` | Healthcheck, errores, seguridad | ✅ |
+| Módulo | Paquete | Responsabilidad en el alcance planificado | Prioridad | Estado actual |
+|---|---|---|---|---|
+| Auth | `auth` | Login JWT, BCrypt y validación de sesión | P0 | ✅ Login, JWT y `/me`; recuperación y registro público fuera del MVP |
+| Usuario | `usuario` | Identidades, roles y cuentas necesarias para el flujo | P0 | 🟡 Entidades, roles y repositorios; alta administrativa pendiente |
+| Liga | `liga` | Alta, consulta y autorización por pertenencia | P0 | 🟡 Consulta y aislamiento implementados; alta pendiente |
+| Equipo | `equipo` | Equipo mínimo asociado a cada piloto | P1 | ⚪ Precarga necesaria por FK; ABM completo fuera del MVP |
+| Piloto | `piloto` | Alta, asociación a equipo/liga y participación en carrera | P0 | ⚪ Sin endpoints ni persistencia del módulo |
+| Vehículo | `vehiculo` | Catálogo y asociaciones avanzadas de vehículos | P2 | ➖ Fuera del MVP; referencia opcional de vehículo ya existe en participantes |
+| Circuito | `circuito` | Catálogo mínimo para asignación a carrera | P1 | ⚪ Tabla lista; precarga pendiente |
+| Carrera | `carrera` | Alta de carrera, participantes y estado de publicación | P0 | 🟡 Entidad/repositorio para importación; altas y publicación pendientes |
+| Sesión | `sesion` | Confirmación de sesión, clasificación oficial y vueltas | P0 | ⚪ Esquema disponible; servicio de confirmación pendiente |
+| Importación | `importacion` | JSON nativo AC, validación, vista previa y carga sin duplicados | P0 | 🟡 Parser, carga y vista previa persistida; faltan asociación de pilotos y confirmación |
+| Estadística | `estadistica` | Historial básico de piloto y consulta de resultados | P1 | ⚪ Historial básico pendiente; analítica avanzada fuera del MVP |
+| Common / Config | `common`, `config` | Seguridad, respuestas de error y healthcheck | P0 | ✅ Funciones principales implementadas |
 
 ## Módulos Frontend (`frontend/`)
 
-| Módulo | Carpeta | Responsabilidad | Estado |
-|---|---|---|---|
-| Landing | `src/modules/landing` | Página pública / marca | 🟡 |
-| Auth | `src/modules/auth` | Login | ✅ conectado a la API |
-| Ligas | `src/modules/ligas` | Gestión y consulta de ligas | ⚪ |
-| Equipos | `src/modules/equipos` | Gestión de equipos | ⚪ |
-| Pilotos | `src/modules/pilotos` | Gestión de pilotos | ⚪ |
-| Carreras | `src/modules/carreras` | Calendario, carga y publicación | ⚪ |
-| Estadísticas | `src/modules/estadisticas` | Historial del piloto (MVP) | ⚪ |
-| Services | `src/services` | Cliente Axios con JWT y sesión | ✅ |
+| Módulo | Carpeta | Responsabilidad en el alcance planificado | Prioridad | Estado actual |
+|---|---|---|---|---|
+| Landing | `src/modules/landing` | Presentación pública y navegación | P1 | 🟡 Vista inicial disponible; diseño final pendiente |
+| Auth | `src/modules/auth` | Formulario de acceso y gestión de sesión | P0 | ✅ Login integrado con API |
+| Ligas | `src/modules/ligas` | Alta/consulta de ligas propias | P0 | ⚪ Carpeta de módulo inicial |
+| Equipos | `src/modules/equipos` | Selección/precarga del equipo mínimo | P1 | ⚪ Carpeta de módulo inicial |
+| Pilotos | `src/modules/pilotos` | Alta y vinculación de pilotos a la carrera | P0 | ⚪ Carpeta de módulo inicial |
+| Carreras | `src/modules/carreras` | Crear carrera, cargar archivo, revisar y publicar resultados | P0 | ⚪ Carpeta de módulo inicial |
+| Estadísticas | `src/modules/estadisticas` | Vista de resultados publicados e historial básico | P1 | ⚪ Carpeta de módulo inicial |
+| Services | `src/services` | Cliente HTTP, JWT y almacenamiento de sesión | P0 | ✅ Axios y sesión disponibles |
+
+### Orden de implementación para el MVP
+
+1. **P0:** alta de liga, pilotos y carrera (criterio CA-03); en paralelo, vistas React con contrato de API acordado.
+2. **P0:** completar importación, asociación de pilotos, revisión, confirmación transaccional y publicación (CA-04 a CA-06).
+3. **P1 mínimo:** consulta de resultados publicados, historial básico y catálogos mínimos de equipos/circuitos (CA-07).
+4. **Calidad transversal:** pruebas negativas por rol y liga, integración MySQL y una demo accesible (CA-08). Los módulos P2 se posponen.
 
 ## Base de datos
 
